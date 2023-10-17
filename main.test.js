@@ -51,11 +51,11 @@ const makeFriendly = function(str) {
 
 // 5. cubeAll
 const cubeAll = function(arr){
-  let result = []
-  for(let i = 0; i < arr.length; i++){
-    result.push(arr[i] ** 3)
+  let newArr = []
+  for(let num of arr){
+    newArr.push(num**3)
   }
-  return result
+  return newArr
 }
 
 
@@ -82,6 +82,77 @@ for(let str of arr){
 }
 return newArr
 }
+
+// const addNoises = function(arr){
+//   const newArray = []
+//   for(const name of arr){
+//     if(name === 'Fido' || name === 'Rolph' || name === 'Maisie'){
+//       newArray.push(name + ' says "Woof!"')
+//     }else if(name === 'Garfield' || name === 'Heathcliff'){
+//       newArray.push(name + ' says "Meow!"')
+//     }else if(name === 'Barnie' || name === SharpTooth){
+//       newArray.push(name + ' says "ROWR."')
+//     }
+//   }
+//   return newArray
+// }
+
+// const addNoises = function(arr){
+//   const dogs = [
+//     'Fido',
+//     'Rolph',
+//     'Maisie',
+//   ];
+
+//   const cats = [
+//     'Garfield',
+//     'Heathcliff',
+//   ]
+
+//   const dinos = [
+//     'Barnie',
+//     'Sharp Tooth',
+//   ]
+//   const newArray = []
+//   for(const name of arr){
+//     if(dogs.includes(name)){
+//       newArray.push(name + ' says "Woof!"')
+//     }else if(cats.includes(name)){
+//       newArray.push(name + ' says "Meow!"')
+//     }else if(dinos.includes(name)){
+//       newArray.push(name + ' says "ROWR."')
+//     }
+//   }
+//   return newArray;
+// }
+
+
+
+// 7. WomenOnly
+
+
+const womenOnly = function(arr){
+  const women = [];
+  for(let name of arr){
+    if(name.endsWith('F')){
+      women.push(name)
+    }
+  }
+    return women;
+  }
+    
+
+  // 8. integersOnly
+  
+  const integersOnly = function(arr){
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] % 1 === 0){
+        newArr.push(arr[i]);
+      }
+    }
+    return newArr;
+  }
 
 
 
